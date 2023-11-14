@@ -1,0 +1,32 @@
+Warning: Design 'ORCA' has '6' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ORCA
+Version: R-2020.09-SP5-4
+Date   : Fri Oct 20 18:49:27 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: pad_iopad_15/PADIO (internal pin)
+  Endpoint: pad[15] (output port clocked by PCI_CLK)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  pad_iopad_15/PADIO (B16I1025_EW)         0.00       0.00 r
+  pad[15] (inout)                          0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

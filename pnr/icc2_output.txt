@@ -1,0 +1,439 @@
+ 
+                              IC Compiler II (TM)
+
+             Version R-2020.09-SP6 for linux64 - May 17, 2021 -SLE
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Loading user preference file /home/usuario12/.synopsys_icc2_gui/preferences.tcl
+##############################################################
+# Function: Create floorplan in ICC2
+# Created by Ahmed Abdelazeem
+##############################################################
+#source scripts/00_common_initial_settings.tcl
+source 00_common_initial_settings.tcl
+### variables
+set current_step "02_icc2_floorplan"
+02_icc2_floorplan
+set before_step  "01_icc2_import"
+01_icc2_import
+### open database
+file mkdir $nlib_dir
+file delete -force $nlib_dir/${design}_${current_step}.nlib
+copy_lib -from_lib ${nlib_dir}/${design}_${before_step}.nlib -to_lib ${nlib_dir}/${design}_${current_step}.nlib -force
+Information: Copying from library "ORCA_TOP_01_icc2_import.nlib" to "/home/usuario12/ORCA_TEST/data/nlib/ORCA_TOP_02_icc2_floorplan.nlib".
+{ORCA_TOP_02_icc2_floorplan.nlib}
+current_lib ${design}_${current_step}.nlib
+{ORCA_TOP_02_icc2_floorplan.nlib}
+### get blocks -all
+open_block ${design}
+Information: User units loaded from library 'saed32_sram_lp' (LNK-040)
+Opening block 'ORCA_TOP_02_icc2_floorplan.nlib:ORCA_TOP.design' in edit mode
+{ORCA_TOP_02_icc2_floorplan.nlib:ORCA_TOP.design}
+### initialize tool
+#source scripts/initialization_settings.tcl
+source initialization_settings.tcl
+Information: The design specific attribute override for layer 'M1' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M3' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M5' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M7' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M9' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M2' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M4' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M6' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'M8' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The design specific attribute override for layer 'MRDL' is set in the current block 'ORCA_TOP', because the actual library setting may not be overwritten. (ATTR-12)
+Information: The returned value for layer 'M1' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M2' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M3' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M4' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M5' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M6' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M7' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M8' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Information: The returned value for layer 'M9' is the design specific attribute override defined within the current block 'ORCA_TOP'. (ATTR-11)
+Using libraries: ORCA_TOP_02_icc2_floorplan.nlib saed32_sram_lp saed32_hvt saed32_lvt saed32_rvt
+Visiting block ORCA_TOP_02_icc2_floorplan.nlib:ORCA_TOP.design
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:NOR2X4'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:SDFFNARX1'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:NAND4X1'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:NOR3X4'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:AND3X4'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:SDFFNARX1'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:MUX21X2'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:LATCHX1'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:AND2X4'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:FADDX2'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:XOR3X2'. (LNK-081)
+Error: Unable to resolve reference to 'ORCA_TOP_02_icc2_floorplan.nlib:OA221X1'. (LNK-081)
+Information: Message limit (link.reference_limit 12) reached for this block, remaining reference messages will be suppressed. (LNK-043)
+Information: Block 'ORCA_TOP_02_icc2_floorplan.nlib:ORCA_TOP.design' has 57 unresolved references. (LNK-074)
+Information: Total 57 mismatches are found on block 'ORCA_TOP_02_icc2_floorplan.nlib:ORCA_TOP.design'. (DMM-116)
+Information: The command 'load_upf' cleared the undo history. (UNDO-016)
+Design 'ORCA_TOP' was successfully linked.
+1
+### create scenarios
+set scenarios_list $default_scenarios
+func_ss0p75v125c_cmax
+#source scripts/scenarios_setup.tcl
+source scenarios_setup.tcl
+Error: could not open script file "/home/usuario12/ORCA_TEST/data/constraints/ORCA_TOP_port_lists.tcl" (CMD-015)
+Created scenario func_ss0p75v125c_cmax for mode func and corner ss0p75v125c_cmax
+All analysis types are activated.
+Removing any SDC constraints from scenario func_ss0p75v125c_cmax
+Error: could not open script file "/home/usuario12/ORCA_TEST/data/constraints/ORCA_TOP_m_func.tcl" (CMD-015)
+### create floorplan
+## non-rectangle shapes
+initialize_floorplan -boundary {{0 0} {999.856 999.856}} -core_offset {0 1.672}
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 0.00%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+## non-rectangle shapes
+#                        _a_         ___________      _b_     _f_
+#              __a___   |   |       |           |    |   |   |   |
+#              |    |   |   b       |           a    a   c   e   |
+#              |    |   |   |       |_f_     _b_|    |   |_d_|   |
+#              b    |   |   |_c_        |   |        |           |
+#              |    |   |       |       e   c        |___________|
+#              |____|   |       d       |   |
+#                       |_______|       |_d_|
+### place ports
+if { [get_terminals * -quiet] != "" } { remove_terminals * }
+remove_individual_pin_constraints
+Information: The command 'remove_individual_pin_constraints' cleared the undo history. (UNDO-016)
+1
+set input_ports [get_ports -filter direction==in]
+{sys_clk sys_2x_clk sdram_clk scan_en test_mode pci_rst_n sdram_rst_n sys_rst_n sys_2x_rst_n pclk pidsel pgnt_n {pad_in[15]} {pad_in[14]} {pad_in[13]} {pad_in[12]} {pad_in[11]} {pad_in[10]} {pad_in[9]} {pad_in[8]} {pad_in[7]} {pad_in[6]} {pad_in[5]} {pad_in[4]} {pad_in[3]} {pad_in[2]} {pad_in[1]} {pad_in[0]} ppar_in {pc_be_in[3]} {pc_be_in[2]} {pc_be_in[1]} {pc_be_in[0]} pframe_n_in ptrdy_n_in pirdy_n_in pdevsel_n_in pstop_n_in pperr_n_in pserr_n_in pm66en {sd_DQ_in[15]} {sd_DQ_in[14]} {sd_DQ_in[13]} {sd_DQ_in[12]} {sd_DQ_in[11]} {sd_DQ_in[10]} {sd_DQ_in[9]} {sd_DQ_in[8]} {sd_DQ_in[7]} {sd_DQ_in[6]} {sd_DQ_in[5]} {sd_DQ_in[4]} {sd_DQ_in[3]} {sd_DQ_in[2]} {sd_DQ_in[1]} {sd_DQ_in[0]} VDD VDDH VSS}
+set_individual_pin_constraints -ports $input_ports -allowed_layers [get_layers {M5 M7}] -side 1 -offset {400 500}
+1
+set output_ports [get_ports -filter direction==out]
+{{pad_out[15]} {pad_out[14]} {pad_out[13]} {pad_out[12]} {pad_out[11]} {pad_out[10]} {pad_out[9]} {pad_out[8]} {pad_out[7]} {pad_out[6]} {pad_out[5]} {pad_out[4]} {pad_out[3]} {pad_out[2]} {pad_out[1]} {pad_out[0]} pad_en ppar_out ppar_en {pc_be_out[3]} {pc_be_out[2]} {pc_be_out[1]} {pc_be_out[0]} pc_be_en pframe_n_out pframe_n_en ptrdy_n_out ptrdy_n_en pirdy_n_out pirdy_n_en pdevsel_n_out pdevsel_n_en pstop_n_out pstop_n_en pperr_n_out pperr_n_en pserr_n_out pserr_n_en preq_n {sd_A[9]} {sd_A[8]} {sd_A[7]} {sd_A[6]} {sd_A[5]} {sd_A[4]} {sd_A[3]} {sd_A[2]} {sd_A[1]} {sd_A[0]} sd_CK sd_CKn sd_LD sd_RW {sd_BWS[1]} {sd_BWS[0]} {sd_DQ_out[15]} {sd_DQ_out[14]} {sd_DQ_out[13]} {sd_DQ_out[12]} {sd_DQ_out[11]} {sd_DQ_out[10]} {sd_DQ_out[9]} {sd_DQ_out[8]} {sd_DQ_out[7]} {sd_DQ_out[6]} {sd_DQ_out[5]} {sd_DQ_out[4]} {sd_DQ_out[3]} {sd_DQ_out[2]} {sd_DQ_out[1]} {sd_DQ_out[0]} {sd_DQ_en[15]} {sd_DQ_en[14]} {sd_DQ_en[13]} {sd_DQ_en[12]} {sd_DQ_en[11]} {sd_DQ_en[10]} {sd_DQ_en[9]} {sd_DQ_en[8]} {sd_DQ_en[7]} {sd_DQ_en[6]} {sd_DQ_en[5]} {sd_DQ_en[4]} {sd_DQ_en[3]} {sd_DQ_en[2]} {sd_DQ_en[1]} {sd_DQ_en[0]}}
+set_individual_pin_constraints -ports $output_ports -allowed_layers [get_layers {M5 M7}] -side 3 -offset {500 600}
+1
+place_pins -self -ports [get_ports *]
+Information: Starting 'place_pins' (FLW-8000)
+Information: Time: 2023-11-14 19:26:05 / Session: 0.01 hr / Command: 0.00 hr / Memory: 397 MB (FLW-8100)
+Load DB...
+CPU Time for load db: 00:00:00.03u 00:00:00.00s 00:00:00.03e: 
+
+Min routing layer: M1
+Max routing layer: M8
+
+
+CPU Time for Top Level Pre-Route Processing: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of block ports: 144
+Number of block pin locations assigned from router: 0
+CPU Time for Pin Preparation: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+Number of PG ports on blocks: 0
+Number of pins created: 144
+CPU Time for Pin Creation: 00:00:00.02u 00:00:00.00s 00:00:00.02e: 
+Total Pin Placement CPU Time: 00:00:00.08u 00:00:00.01s 00:00:00.10e: 
+Information: Ending 'place_pins' (FLW-8001)
+Information: Time: 2023-11-14 19:26:05 / Session: 0.01 hr / Command: 0.00 hr / Memory: 414 MB (FLW-8100)
+1
+### create voltage areas
+create_voltage_area -power_domains PD_RISC_CORE -guard_band {{10.032 10}} -region {{0.0000 642.0480} {489.1360 999.8560}}
+{PD_RISC_CORE}
+### place hard macros
+#source ./data/ORCA_TOP.place_macros.tcl
+read_def ../data/ORCA_TOP.place_macros.def.gz
+Information: Loading DEF file '/home/usuario12/ORCA_TEST/data/ORCA_TOP.place_macros.def.gz' (FILE-007)
+Information: Reading 'VERSION' statement. (DEFR-016)
+Information: Reading 'DIVIDERCHAR' statement. (DEFR-016)
+Information: Reading 'BUSBITCHARS' statement. (DEFR-016)
+Information: Reading 'DESIGN' statement. (DEFR-016)
+Information: Reading 'UNITS' statement. (DEFR-016)
+Information: Reading 'COMPONENTS' section. (DEFR-016)
+Warning: Cannot find cell 'I_SDRAM_TOP/I_SDRAM_WRITE_FIFO/SD_FIFO_RAM_0'. (DEFR-029)
+Warning: Cannot find cell 'I_SDRAM_TOP/I_SDRAM_WRITE_FIFO/SD_FIFO_RAM_1'. (DEFR-029)
+Warning: Cannot find cell 'I_SDRAM_TOP/I_SDRAM_READ_FIFO/SD_FIFO_RAM_0'. (DEFR-029)
+Warning: Cannot find cell 'I_SDRAM_TOP/I_SDRAM_READ_FIFO/SD_FIFO_RAM_1'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_1'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_2'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_3'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_4'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_5'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_6'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_7'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_WRITE_FIFO/PCI_FIFO_RAM_8'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_1'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_2'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_3'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_4'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_5'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_6'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_7'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_3_3'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_3_4'. (DEFR-029)
+Warning: Cannot find cell 'I_PCI_TOP/I_PCI_READ_FIFO/PCI_FIFO_RAM_8'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_3_2'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_0_1'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_0_2'. (DEFR-029)
+Warning: Cannot find cell 'I_RISC_CORE/I_REG_FILE/REG_FILE_A_RAM'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_1_2'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_1_3'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_1_4'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_2_1'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_2_2'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_2_3'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_2_4'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_3_1'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_0_3'. (DEFR-029)
+Warning: Cannot find cell 'I_RISC_CORE/I_REG_FILE/REG_FILE_D_RAM'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_0_4'. (DEFR-029)
+Warning: Cannot find cell 'I_RISC_CORE/I_REG_FILE/REG_FILE_C_RAM'. (DEFR-029)
+Warning: Cannot find cell 'I_CONTEXT_MEM/I_CONTEXT_RAM_1_1'. (DEFR-029)
+Warning: Cannot find cell 'I_RISC_CORE/I_REG_FILE/REG_FILE_B_RAM'. (DEFR-029)
+-----------------------------------------------
+Number of Cells Not Found per Reference Design
+-----------------------------------------------
+SRAMLP2RW128x16                : 4
+SRAMLP2RW32x4                  : 16
+SRAMLP2RW64x32                 : 4
+SRAMLP2RW64x8                  : 16
+---------------------------------------
+Number of Processed/Read DEF Constructs
+---------------------------------------
+VERSION                        : 1/1
+DIVIDERCHAR                    : 1/1
+BUSBITCHARS                    : 1/1
+DESIGN                         : 1/1
+UNITS                          : 1/1
+COMPONENTS                     : 0/40
+1
+## what happens if macros are not fixed
+set_att [get_flat_cells -filter "design_type==macro"] physical_status fixed
+#set_app_options -name place.coarse.fix_hard_macros -value false
+#set_app_options -name plan.place.auto_create_blockages -value auto
+#create_placement -floorplan -effort low
+### create keepout margin for macros : how to get macros
+create_keepout_margin -outer {5 5 5 5} [get_flat_cells -filter "design_type==macro"]
+Error: Nothing matched for block_and_cell_list (SEL-005)
+Error: bad value specified for option block_and_cell_list
+        Use error_info for more info. (CMD-013)
+### create boundary cells : check and set up corner cells
+remove_boundary_cell_rules -all 
+Information: The command 'remove_boundary_cell_rules' cleared the undo history. (UNDO-016)
+Information: Boundary cell placement rules are not set. (CHF-021)
+1
+set_boundary_cell_rules -left_boundary_cell $endcap_left -right_boundary_cell $endcap_right -top_boundary_cell $endcap_top -bottom_boundary_cell $endcap_bottom
+1
+#set_boundary_cell_rules -left_boundary_cell $endcap_left -right_boundary_cell $endcap_right -top_boundary_cell $endcap_top -bottom_boundary_cell $endcap_bottom -bottom_right_inside_corner_cells $endcap_left -bottom_right_outside_corner_cell $endcap_left -top_left_inside_corner_cells $endcap_left -bottom_left_outside_corner_cell $endcap_left -top_left_outside_corner_cell $endcap_left -top_right_outside_corner_cell $endcap_left -bottom_left_inside_corner_cells $endcap_left -top_left_inside_corner_cells $endcap_left -top_right_inside_corner_cells $endcap_left -at_va_boundary
+compile_boundary_cells -voltage_area "PD_RISC_CORE"
+Using CL to insert boundary cells
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 0 total shapes.
+Layer M2: cached 0 shapes out of 0 total shapes.
+Cached 0 vias out of 0 total vias.
+Information: Starting boundary cell insertion into ORCA_TOP using site master "unit". (CHF-200)
+        70% complete ...
+        80% complete ...
+        90% complete ...
+Information: Total 212 left cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 0 bottom cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 212 right cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 2146 top cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 2570 boundary cells inserted successfully into ORCA_TOP. (CHF-100)
+1
+compile_boundary_cells -voltage_area "DEFAULT_VA"
+Using CL to insert boundary cells
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Cached 0 vias out of 0 total vias.
+Warning: The design already has boundary cells of type SHFILL3_HVT. (CHF-127)
+Information: Starting boundary cell insertion into ORCA_TOP using site master "unit". (CHF-200)
+        10% complete ...
+        20% complete ...
+        30% complete ...
+        40% complete ...
+        50% complete ...
+        60% complete ...
+        70% complete ...
+        80% complete ...
+        90% complete ...
+Information: Total 595 left cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 0 bottom cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 596 right cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 4386 top cells inserted successfully into ORCA_TOP. (CHF-100)
+Information: Total 5577 boundary cells inserted successfully into ORCA_TOP. (CHF-100)
+1
+### create tap cells
+create_tap_cells -lib_cell $tapcell_ref -pattern stagger -distance 70 -skip_fixed_cells -voltage_area "PD_RISC_CORE"
+Using CL to insert tap cells
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Cached 0 vias out of 0 total vias.
+Information: Starting tap cell insertion into ORCA_TOP using site master "unit". (CHF-200)
+        70% complete ...
+        80% complete ...
+        90% complete ...
+Information: Total 1498 tap cells inserted successfully into ORCA_TOP. (CHF-100)
+create_tap_cells -lib_cell $tapcell_ref -pattern stagger -distance 70 -skip_fixed_cells -voltage_area "DEFAULT_VA"
+Using CL to insert tap cells
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+        place.legalize.enable_prerouted_net_check: 1
+        place.legalize.num_tracks_for_access_check: 1
+        place.legalize.use_eol_spacing_for_access_check: 0
+        place.legalize.allow_touch_track_for_access_check: 1
+        place.legalize.reduce_conservatism_in_eol_check: 0
+        place.legalize.preroute_shape_merge_distance: 0.0
+        place.legalize.enable_non_preferred_direction_span_check: 0
+
+Cached 0 vias out of 0 total vias.
+Information: Starting tap cell insertion into ORCA_TOP using site master "unit". (CHF-200)
+        10% complete ...
+        20% complete ...
+        30% complete ...
+        40% complete ...
+        50% complete ...
+        60% complete ...
+        70% complete ...
+        80% complete ...
+        90% complete ...
+Information: Total 7131 tap cells inserted successfully into ORCA_TOP. (CHF-100)
+### connect pg
+connect_pg_net -automatic
+****************************************
+Report : Power/Ground Connection Summary
+Design : ORCA_TOP
+Version: R-2020.09-SP6
+Date   : Tue Nov 14 19:26:14 2023
+****************************************
+P/G net name                   P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                  0/12708
+Power net VDDH                 0/4068
+Ground net VSS                 0/16776
+--------------------------------------------------------------------------------
+Information: connections of 33552 power/ground pin(s) are created or changed.
+### save design
+save_block -force
+Information: The command 'save_block' cleared the undo history. (UNDO-016)
+Information: Saving block 'ORCA_TOP_02_icc2_floorplan.nlib:ORCA_TOP.design'
+1
+save_lib
+Saving library 'ORCA_TOP_02_icc2_floorplan.nlib'
+1
+### exit icc2
+print_message_info
+
+Id             Severity         Limit    Occurrences   Suppressed
+--------------------------------------------------------------------
+ATTR-11     Information             0              9            0
+ATTR-12     Information             0             10            0
+CHF-021     Information             0              1            0
+CHF-100     Information             0             12            0
+CHF-127         Warning             0              1            0
+CHF-200     Information             0              4            0
+CMD-013           Error             0              1            0
+CMD-015           Error             0              2            0
+DEFR-016    Information             0              6            0
+DEFR-029        Warning             0             40            0
+DMM-116     Information             0              1            0
+FILE-007    Information             0              1            0
+FLW-8000    Information             0              1            0
+FLW-8001    Information             0              1            0
+FLW-8100    Information             0              2            0
+LNK-040     Information             0              1            0
+LNK-043     Information             0              1            0
+LNK-074     Information             0              1            0
+LNK-081           Error             0             12            0
+PDC-003         Warning             0              4            0
+SEL-005           Error             0              1            0
+UNDO-016    Information             0              4            0
+
+Diagnostics summary: 16 errors, 45 warnings, 55 informationals
+#quit!
+##############################################################
+# END
+##############################################################
+icc2_shell> source 00_common_initial_settings.tcl
+icc2_shell> set current_step "01_icc2_import"
+01_icc2_import
+icc2_shell> file mkdir $nlib_dir
+icc2_shell> file delete -force $nlib_dir/${design}_${current_step}.nlib
+icc2_shell> create_lib -technology $synopsys_tech_tf -ref_libs $ndm_files $nlib_dir/${design}_${current_step}.nlib
+Information: Loading technology file '/home/usuario12/ORCA_TEST/library/tech/icc2/saed32nm_1p9m_mw.v10.tf' (FILE-007)
+{ORCA_TOP_01_icc2_import.nlib}
+icc2_shell> read_verilog -library ${design}_${current_step}.nlib -design ${design} -top $design $import_netlists
+Information: Reading Verilog into new design 'ORCA_TOP' in library 'ORCA_TOP_01_icc2_import.nlib'. (VR-012)
+Loading verilog file '/home/usuario12/ORCA_TEST/data/ORCA.v'
+Number of modules read: 68
+Top level ports: 144
+Total ports in all modules: 4436
+Total nets in all modules: 16396
+Total instances in all modules: 10837
+Elapsed = 00:00:00.23, CPU = 00:00:00.23
+1
+icc2_shell> link_block
+Using libraries: ORCA_TOP_01_icc2_import.nlib saed32_sram_lp saed32_hvt saed32_lvt saed32_rvt
+Linking block ORCA_TOP_01_icc2_import.nlib:ORCA_TOP.design
+Warning: Unable to resolve reference to 'SDFFX1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'SDFFX1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'SDFFARX1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'AND2X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'XNOR2X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'XNOR3X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'OAI22X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'AO22X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'OR2X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'XOR2X1' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'NAND4X0' first referenced from module 'PARSER'. (LNK-005)
+Warning: Unable to resolve reference to 'NAND3X0' first referenced from module 'PARSER'. (LNK-005)
+Information: Message limit (link.reference_limit 12) reached for this block, remaining reference messages will be suppressed. (LNK-043)
+Information: Block 'ORCA_TOP_01_icc2_import.nlib:ORCA_TOP.design' has 10641 unbound instances. (LNK-073)
+Information: Block 'ORCA_TOP_01_icc2_import.nlib:ORCA_TOP.design' has 57 unresolved references. (LNK-074)
+Information: Total 57 mismatches are found on block 'ORCA_TOP_01_icc2_import.nlib:ORCA_TOP.design'. (DMM-116)
+Design 'ORCA_TOP' was successfully linked.
+0
+icc2_shell> exit
+Maximum memory usage for this session: 459.11 MB
+Maximum memory usage for this session including child processes: 459.11 MB
+CPU usage for this session:     51 seconds (  0.01 hours)
+Elapsed time for this session:    571 seconds (  0.16 hours)
+Thank you for using IC Compiler II.
+

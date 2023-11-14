@@ -1,0 +1,25 @@
+#@ # 
+#@ # Running icc2_shell Version R-2020.09-SP6 for linux64 -- May 17, 2021
+#@ # Date:   Tue Nov 14 19:25:48 2023
+#@ # Run by: usuario12@synopsys.elo.utfsm.cl
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+source -echo -verbose 02_create_floorplan.tcl
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class pseudo_bump -filter {deleted}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-82}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region bump_region pseudo_bump pin_blockage block_shielding topology_node topology_edge topology_repeater annotation_shape core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class pseudo_bump -filter {deleted}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-82}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region bump_region pseudo_bump pin_blockage topology_node topology_edge topology_repeater annotation_shape edit_group shape via placement_blockage }
+source 00_common_initial_settings.tcl
+set current_step "01_icc2_import"
+file mkdir $nlib_dir
+file delete -force $nlib_dir/${design}_${current_step}.nlib
+create_lib -technology $synopsys_tech_tf -ref_libs $ndm_files $nlib_dir/${design}_${current_step}.nlib
+read_verilog -library ${design}_${current_step}.nlib -design ${design} -top $design $import_netlists
+link_block
+exit
