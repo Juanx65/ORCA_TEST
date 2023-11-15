@@ -1,7 +1,8 @@
 # ORCA_TOP XG mode scan insertion script
 
+set synthetic_library dw_foundation.sldb
 set_app_var target_library {"../models/saed32io_ss0p95v125c_2p25v.db" "../models/saed32pll_ff1p16v125c_2p75v.db" "../models/saed32pll_ss0p95v125c_2p25v.db" "../models/saed32pll_ss0p95v125c_2p25v.db" "../models/saed32rvt_ff0p85v125c.db" "../models/saed32rvt_ff1p16v125c.db" "../models/saed32rvt_ss0p95v125c.db"}
-set_app_var link_library "* $target_library"
+set_app_var link_library "* $target_library $synthetic_library"
 
 read_ddc ../output/unmapped/ORCA_TOP.ddc
 current_design ORCA_TOP

@@ -7,7 +7,8 @@
 # Time Unit: ns
 # Cap Unit : pf
 
-set max_opcon saed32rvt_ff0p85v125c
+#set max_opcon saed32rvt_ff0p85v125c
+set max_opcon ff0p85v125c
 
 set_operating_conditions -min ff1p16v125c  -max ss0p95v125c
 
